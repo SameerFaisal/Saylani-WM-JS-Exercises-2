@@ -366,3 +366,74 @@ function sum(fNumber, sNumber) {
 }
 
 //Q # 4
+document.write("<br/><br/><br/><br/>");
+document.write("<h1>Calculator<h1/>");
+var firNum = prompt("Enter first Number");
+var secNum = prompt("Enter second Number");
+var op = prompt("Enter an operator (+, -, *, /, %):");
+
+document.write("The desired result is: " + calculator(firNum, secNum, op));
+
+function calculator(num1, num2, ope) {
+    if (ope === "+") {
+        return (parseFloat(num1) + parseFloat(num2));
+    } else if (ope === "-") {
+        return (parseFloat(num1) - parseFloat(num2));
+    } else if (ope === "*") {
+        return (parseFloat(num1) * parseFloat(num2));
+    } else if (ope === "/") {
+        return (parseFloat(num1) / parseFloat(num2));
+    } else if (ope === "%") {
+        return (parseFloat(num1) % parseFloat(num2));
+    }
+
+}
+
+//Q # 5
+document.write("<br/><br/><br/><br/>");
+var squareNumber = prompt("Enter a number to be squared: ");
+document.write("The square of " + squareNumber + " is " + squaring(squareNumber));
+
+function squaring(sqNum) {
+    return (parseFloat(sqNum) * parseFloat(sqNum));
+}
+
+//Q # 6
+document.write("<br/><br/><br/><br/>");
+var a = +prompt("Enter number for factorial computing: ");
+document.write("The factorial of: " + a + " is " + Factorial(a));
+
+function Factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * Factorial(n - 1);
+    }
+}
+
+//Q # 7
+document.write("<br/><br/><br/><br/>");
+var stNum = +prompt("Where to start counting from?");
+var enNum = +prompt("Where to end the counting?");
+Counting(stNum, enNum);
+
+function Counting(stNum, enNum) {
+    for (var k = stNum; k <= enNum; k++) {
+        document.write(k + "<br>")
+    }
+}
+
+//Q # 8
+document.write("<br/><br/><br/><br/>");
+var baseTriangle = prompt("Enter base of the triangle");
+var perpTriangle = prompt("Enter perpendicular of the triangle");
+
+function calculateHypotenuse(base, perp) {
+
+    function calculateSquare(num) {
+        return num * num;
+    }
+    hyp = calculateSquare(base) + calculateSquare(perp);
+    return Math.sqrt(hyp);
+}
+document.write(calculateHypotenuse(parseFloat(baseTriangle), parseFloat(perpTriangle)));

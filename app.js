@@ -1,5 +1,4 @@
 /* -------------Chapter no 21-25--------------- */
-
 //Q # 1
 var firstName = prompt("Enter Your First Name:");
 var lastName = prompt("Enter Your Last Name:");
@@ -118,13 +117,13 @@ function checkAlphaNum(str) {
 }
 var pswd = prompt("Enter your password:");
 if (pswd.charCodeAt(0) >= 48 && pswd.charCodeAt(0) <= 57) {
-    document.write("<h1>Entered Password: " + pswd + "<br>Password can not begin with a number<br>Please enter a valid password</h1>");
+    document.write("Entered Password: " + pswd + "<br>Password can not begin with a number<br>Please enter a valid password");
 } else if (pswd.length < 6) {
-    document.write("<h1>Entered Password: " + pswd + "<br>Password must be atleast 6 characters long<br>Please enter a valid password</h1>");
+    document.write("Entered Password: " + pswd + "<br>Password must be atleast 6 characters long<br>Please enter a valid password");
 } else if (checkAlphaNum(pswd)) {
-    document.write("<h1>Entered Password: " + pswd + "<br>Password must contain alphabets and numbers<br>Please enter a valid password</h1>");
+    document.write("Entered Password: " + pswd + "<br>Password must contain alphabets and numbers<br>Please enter a valid password");
 } else {
-    document.write("<h1>Entered Password: " + pswd + "<br>Your password is valid</h1>");
+    document.write("Entered Password: " + pswd + "<br>Your password is valid");
 }
 
 //Q # 16
@@ -140,14 +139,14 @@ document.write("<br/><br/><br/><br/>");
 var inputString = prompt("Enter a String: ");
 document.write("User Input: " + inputString);
 var lastChar = inputString[inputString.length - 1];
-document.write("<h1>User input: " + inputString + "<br>Last character of input: " + lastChar + "</h1>");
+document.write("User input: " + inputString + "<br>Last character of input: " + lastChar);
 
 //Q # 18
 document.write("<br/><br/><br/><br/>");
 var str3 = "The quick brown fox jumps over the lazy dog ";
 var strLength = str3.toLowerCase();
 var count = (strLength.match(/the/g)).length;
-document.write("<h1>Text: " + strLength + "<br>There are " + count + " occurance(s) of word 'the'</h1>");
+document.write("Text: " + strLength + "<br>There are " + count + " occurance(s) of word 'the'");
 
 /* -------------Chapter no 26-30--------------- */
 
@@ -214,3 +213,125 @@ if (guess == randNumber) {
 }
 
 /* -------------Chapter no 31-34--------------- */
+
+
+//Q # 1
+document.write("<br/><br/><br/><br/>");
+var d = new Date();
+document.write("Current Date: " + d);
+
+
+//Q # 2
+document.write("<br/><br/><br/><br/>");
+var monthsName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var m = new Date();
+document.write("The current month is: " + monthsName[d.getMonth()]);
+
+//Q # 3
+document.write("<br/><br/><br/><br/>");
+var daysName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var day = new Date();
+document.write("Today is: " + daysName[day.getDay()]);
+
+
+//Q # 4
+document.write("<br/><br/><br/><br/>");
+var days = new Date();
+var currentDay = days.getDay();
+var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+if (dayNames[currentDay] === "Sat" || dayNames[currentDay] === "Sun") {
+    document.write("It`s Fun day");
+}
+
+//Q # 5
+document.write("<br/><br/><br/><br/>");
+var dateofMonth = new Date();
+var currentDate = dateofMonth.getDate();
+if (currentDate >= "1" && currentDate <= "15") {
+    document.write("First-fifteen days of the month");
+} else {
+    document.write("Last days of the month");
+}
+
+//Q # 6
+document.write("<br/><br/><br/><br/>");
+var today = new Date();
+var otherDay = new Date("January 1, 1970");
+var msToday = today.getTime();
+var msOtherDay = otherDay.getTime();
+var msDiff = msToday - msOtherDay;
+var mDiff = msDiff / (3600000);
+document.write("Current Date: " + today + "<br>");
+document.write("Elapsed milliseconds since January 1, 1970: " + msDiff + "<br>");
+document.write("Elapsed minutes since January 1, 1970: " + mDiff)
+
+//Q # 7
+document.write("<br/><br/><br/><br/>");
+var timeNow = new Date();
+var hours = timeNow.getHours();
+if (hours >= 0 && hours < 12) {
+    document.write("It`s AM");
+} else {
+    document.write("It`s PM");
+}
+
+//Q # 8
+document.write("<br/><br/><br/><br/>");
+var laterDate = new Date("Thu December 31, 2020");
+document.write("Later date: " + laterDate);
+
+//Q # 9
+document.write("<br/><br/><br/><br/>");
+var firstRamadan = new Date("June 18, 2015");
+var todaysDay = new Date();
+var days1 = (todaysDay.getTime() - firstRamadan.getTime()) / (1000 * 60 * 60 * 24);
+days1 = Math.floor(days1);
+document.write(days1 + " days have passed since 1st Ramadan,2015 ");
+
+//Q # 10
+document.write("<br/><br/><br/><br/>");
+var ref = new Date("Dec 05, 2015 22:50:16");
+var date = new Date("Jan 01, 2015");
+var sec = (ref.getTime() - date.getTime()) / (1000 * 60);
+sec = Math.ceil(sec);
+document.write("On reference date " + ref + "<br>");
+document.write(sec + " seconds had passed since beginning of 2015 ");
+
+//Q # 11
+document.write("<br/><br/><br/><br/>");
+var cur = new Date();
+document.write("Current date : " + cur);
+var agotime = new Date();
+agotime.setHours(agotime.getHours() - 1);
+document.write("<br>1 hour ago, it was " + agotime);
+
+//Q # 12
+document.write("<br/><br/><br/><br/>");
+var curDate = new Date();
+var lstDate = new Date();
+lstDate.setFullYear(lstDate.getFullYear() - 100);
+document.write("Current date: " + curDate + ",<br>100 years back, it was " + lstDate);
+
+//Q # 13
+var age = prompt("Enter your age");
+var currentDate = new Date();
+var curYear = currentDate.getFullYear();
+brtYear = curYear - age;
+document.write("Your age is " + age + "<br>Your birth year is " + brtYear);
+
+//Q # 14
+document.write("<br/><br/><br/><br/>");
+document.write("<h1>K-ELECTRIC BILL<h1/>");
+var nowDate = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Deember"];
+var curMonth = months[nowDate.getMonth()];
+var customerName = "Sameer Faisal";
+var units = 411.55894723;
+var amountPerUnit = 16;
+var lateSurcharge = 350;
+var amountDue = parseFloat((units * amountPerUnit).toFixed(2));
+var amountAftDue = parseFloat((amountDue + lateSurcharge).toFixed(2));;
+document.write("<h3>Customer name: <b>" + customerName + "</b><br>Month: <b>" + curMonth + "</b><br>Number of units: <b>" + units + "</b><br>Charges per unit: <b>" + amountPerUnit + "</b><br><br>Net amount payable(within due date): <b>" + amountDue + "</b><br>Late payment surcharge: <b>" + lateSurcharge + "</b><br>Gross amount payable after due date: <b>" + amountAftDue + "</b></h3>");
+
+
+//Q # 15

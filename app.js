@@ -214,7 +214,6 @@ if (guess == randNumber) {
 
 /* -------------Chapter no 31-34--------------- */
 
-
 //Q # 1
 document.write("<br/><br/><br/><br/>");
 var d = new Date();
@@ -333,5 +332,37 @@ var amountDue = parseFloat((units * amountPerUnit).toFixed(2));
 var amountAftDue = parseFloat((amountDue + lateSurcharge).toFixed(2));;
 document.write("<h3>Customer name: <b>" + customerName + "</b><br>Month: <b>" + curMonth + "</b><br>Number of units: <b>" + units + "</b><br>Charges per unit: <b>" + amountPerUnit + "</b><br><br>Net amount payable(within due date): <b>" + amountDue + "</b><br>Late payment surcharge: <b>" + lateSurcharge + "</b><br>Gross amount payable after due date: <b>" + amountAftDue + "</b></h3>");
 
+/* -------------Chapter no 35-38--------------- */
 
-//Q # 15
+//Q # 1
+document.write("<br/><br/><br/><br/>");
+
+function currentdate() {
+    return (new Date());
+}
+var dd = currentdate();
+document.write(dd);
+
+//Q # 2
+document.write("<br/><br/><br/><br/>");
+var fstName = prompt("Enter your First Name")
+var lastName = prompt("Enter your last Name")
+Name(fstName, lastName);
+
+function Name(a, b) {
+    document.write("Greetings!! " + a + " " + b)
+}
+
+//Q # 3
+document.write("<br/><br/><br/><br/>");
+var firstNumber = prompt("Enter First Number");
+var secondNumber = prompt("Enter Second Number");
+var result = sum(firstNumber, secondNumber);
+document.write(result);
+
+function sum(fNumber, sNumber) {
+    var result = parseFloat(fNumber) + parseFloat(sNumber);
+    return (result);
+}
+
+//Q # 4

@@ -437,3 +437,99 @@ function calculateHypotenuse(base, perp) {
     return Math.sqrt(hyp);
 }
 document.write(calculateHypotenuse(parseFloat(baseTriangle), parseFloat(perpTriangle)));
+
+//Q # 9
+document.write("<br/><br/><br/><br/>");
+
+function area(width, height) {
+    return width * height;
+}
+document.write("area is " + area(12, 15) + "<br>"); // Passing values
+var w = 12;
+var h = 15;
+document.write("another area is " + area(w, h)); // Passing variables
+
+//Q # 10
+document.write("<br/><br/><br/><br/>");
+
+function palindromeCheck(string) {
+    var string2 = "";
+    for (i = string.length - 1; i >= 0; i--) {
+        string2 += string[i];
+    }
+    if (string2 == string) {
+        document.write(string + " is a palindrome word");
+    } else {
+
+    }
+}
+var word = prompt("Enter a word");
+palindromeCheck(word);
+
+//Q # 11
+document.write("<br/><br/><br/><br/>");
+
+function convFirst(string) {
+    var letter = " ";
+    for (j = 0; j < string.length; j++) {
+        if (letter === " ") {
+            letter = string[j];
+            document.write(letter.toUpperCase());
+        } else {
+            letter = string[j];
+            document.write(letter);
+        }
+    }
+}
+convFirst(prompt("Enter a string"));
+
+//Q # 12
+document.write("<br/><br/><br/><br/>");
+
+var longestSTR = prompt("Enter a string to extract longest word");
+document.write("Longest Word: " + longestWord(longestSTR));
+
+function longestWord(str) {
+    var strSplit = str.split(' ');
+    var longestWord = 0;
+    var word = "";
+    for (var i = 0; i < strSplit.length; i++) {
+        if (strSplit[i].length > longestWord) {
+            longestWord = strSplit[i].length;
+            word = strSplit[i];
+        }
+    }
+    return word;
+}
+
+//Q # 13
+document.write("<br/><br/><br/><br/>");
+
+function charCounter(string, char) {
+    var count = 0;
+    for (i = 0; i < string.length; i++) {
+        if (string[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+var count = charCounter("JSResources.com", "o");
+document.write("'o' occured " + count + " times in JSResources.com");
+
+//Q # 14
+document.write("<br/><br/><br/><br/>");
+document.write("<h1>The Geometrizer<h1/>");
+
+function calcCircumference(r) {
+    var c = 2 * 3.142 * r;
+    return c;
+}
+
+function calcArea(r) {
+    var a = 3.142 * r * r;
+    return a;
+}
+var radius = prompt("Enter radius of circle");
+document.write("The circumference is " + calcCircumference(radius) + "<br>");
+document.write("The area is " + calcArea(radius));
